@@ -1,0 +1,24 @@
+extends: ["spectral:oas"]
+
+rules:
+  info-description-required:
+    description: Info object must have description
+    given: $.info
+    then:
+      field: description
+      function: truthy
+
+  operation-description-required:
+    description: All operations must have descriptions
+    given: $.paths[*][*]
+    then:
+      field: description
+      function: truthy
+
+  version-in-path-required:
+    description: Paths must include version (v1, v2, etc.)
+    given: $.paths[*]~
+    then:
+      function: pattern
+      functionOptions:
+        match: "^/v[0-9]+/"

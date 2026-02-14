@@ -2,10 +2,17 @@ openapi: 3.0.3
 info:
   title: Platform API Template
   version: 1.0.0
-  description: Standardized API template enforcing platform guidelines
+  description: Standardized API template enforcing platform guidelines.
+  contact:
+    name: Manogna teams
+    email: manognavengala898@gmail.com
 
 servers:
   - url: http://localhost:3000
+
+tags:
+  - name: Users
+    description: Operations related to user management  
 
 components:
   securitySchemes:
@@ -43,6 +50,10 @@ paths:
   /v1/users:
     get:
       summary: Get all users
+      description: Retrieve a list of all registered users.
+      operationId: getUsers
+      tags:
+        - Users
       security:
         - bearerAuth: []
       responses:
@@ -63,6 +74,10 @@ paths:
 
     post:
       summary: Create a user
+      description: Create a new user in the system.
+      operationId: createUser
+      tags:
+        - Users
       security:
         - bearerAuth: []
       requestBody:
