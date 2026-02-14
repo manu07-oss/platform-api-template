@@ -23,5 +23,8 @@
   "dependencies": {
     "swagger-ui-express": "^5.0.1",
     "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@stoplight/spectral-cli": "^6.15.0"
   }
 }

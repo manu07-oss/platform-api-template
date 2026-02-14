@@ -5,11 +5,17 @@ const { v4: uuidv4 } = require('uuid');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const path = require('path');
-const swaggerDocument = YAML.load(path.join(__dirname, '../openapi.yaml'));
+
+const app = express(); // ✅ define app FIRST
+
+// Load OpenAPI file
+const swaggerDocument = YAML.load(
+  path.join(__dirname, '../openapi.yaml')
+);
+
+// Swagger route
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-
-const app = express();
 app.use(express.json());
 
 // Correlation ID Middleware
