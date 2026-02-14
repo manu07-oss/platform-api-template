@@ -1,0 +1,21 @@
+{
+  "name": "platform-api-template",
+  "version": "1.0.0",
+  "description": "platform-api-template/\r │\r ├── src/\r │   ├── controllers/\r │   ├── services/\r │   ├── middleware/\r │   ├── errors/\r │   └── utils/\r │\r ├── openapi.yaml\r ├── .spectral.yaml\r ├── Dockerfile\r ├── .gitlab-ci.yml\r └── README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manu07-oss/platform-api-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/manu07-oss/platform-api-template/issues"
+  },
+  "homepage": "https://github.com/manu07-oss/platform-api-template#readme"
+}
